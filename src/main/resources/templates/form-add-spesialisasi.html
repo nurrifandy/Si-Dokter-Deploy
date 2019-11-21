@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <object th:include="fragments/fragment :: getBootstrap" th:remove="tag"></object>
+    <object th:include="fragments/fragment :: css-js" th:remove="tag"></object>
+</head>
+<body>
+    <nav th:replace="fragments/fragment :: navbar"></nav>
+    <div class="">
+        <div class="alert alert-success" th:if=${msg}>Spesialisasi berhasil ditambahkan!</div>
+            <div class="row p-4">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4 border shadow rounded">
+        
+                        <div class="text-center h3 m-3"><i>Tambah Spesialisasi</i></div>
+                        <div class="d-flex justify-content-center row">
+                            <form th:action="@{/spesialisasi/add}" th:object="${spesialisasi}" method="POST">
+                                <div class="form-group row">
+                                    <label for="inputNama" class="col-md-2 col-form-label"><b>Nama</b></label>
+                                    <div class="col-md-10">
+                                        <input class="form-control form-control-plaintext border rounded-pill" type="text" id="inputNama" name="namaSpesialisasi" placeholder=" example : Poli Jantung ">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="inputLokasi" class="col-md-2 col-form-label"><b>Gelar</b></label>
+                                    <div class="col-md-10">
+                                        <input class="form-control form-control-plaintext border rounded-pill" type="text" id="inputLokasi" name="gelarSpesialisasi" placeholder=" example : Ruang 1102 ">
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center mb-3">
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                </div>
+                                
+                            </form>
+                        </div>
+        
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+            </div>    
+</body>
+</html>

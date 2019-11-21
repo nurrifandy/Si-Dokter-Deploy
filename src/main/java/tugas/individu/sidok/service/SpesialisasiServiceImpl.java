@@ -18,6 +18,12 @@ public class SpesialisasiServiceImpl implements SpesialisasiService{
     private SpesialisasiDb spesialisasiDb;
 
     @Override
+    public void addSpesialisasi(SpesialisasiModel spesialisasi) {
+        // TODO Auto-generated method stub
+        spesialisasiDb.save(spesialisasi);
+    }
+
+    @Override
     public List<SpesialisasiModel> getSpesialisasiList(){
         return spesialisasiDb.findAll();
     }

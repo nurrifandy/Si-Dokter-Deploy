@@ -11,7 +11,7 @@
 	<groupId>tugas.individu</groupId>
 	<artifactId>sidok</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
+
 	<name>sidok</name>
 	<description>Sidok Tugas Individu</description>
 
@@ -24,6 +24,10 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId >
+			<artifactId>postgresql</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -52,6 +56,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+   			<groupId>org.springframework.boot</groupId>
+   			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 	</dependencies>
 
